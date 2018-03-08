@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" href="css/bootstrap.min.css">
+    <link rel="stylesheet" href="css/welcome.css">
+    <title>| Hello |</title>
+    <script src="js/welcome.js"></script>
+    <script src="js/d3.min.js"></script>
+
+</head>
+<body>
+    <div class="container">
+        <div class="row" style="margin-top: 20px;text-align: center">
+            <div class="col-md-12" >
+                <h2> Hello </h2>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-md-12 myclass">
+                <p class="paragraph1"> This is the content line 1 </p>
+                <p id = "paragraph2"> This is the content line 2 </p>
+                <p> This is the content line 3 </p>
+            </div>
+        </div>
+    </div>
+    <script>
+        d3.selectAll(".paragraph1").style("color","red");
+//        d3.select(".myclass").append("span").text("This line added using D3");
+        d3.select(".myclass").append("p").html("This line added using <span> D3 </span>");
+        d3.select("#paragraph2").attr("style","color:#999");
+    </script>
+</body>
+</html>
